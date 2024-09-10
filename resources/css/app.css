@@ -1,18 +1,17 @@
 :root {
     --primary-color: #1666d9;
     --primary-color-hover: #0c51b1;
-    font-size: 16px;
-}
 
-html {
+    font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-    background-color: white;
 }
+
 body {
-    padding: 1rem 1.5rem;
+    background-color: white;
+    min-height: 100vh;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -31,6 +30,7 @@ nav {
     align-items: center;
     padding-bottom: 1rem;
     border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 1rem;
 }
 .logo-section {
     display: flex;
@@ -87,7 +87,40 @@ nav a.active {
     width: 2.5rem;
     border-radius: 999px;
 }
+.main-page {
+    display: grid;
+    grid-template-columns: 67% 33%;
+    height: 100vh;
+    padding: 0 1rem;
+}
+.main-page .map-container {
+    padding: 1rem;
+}
+.main-page main {
+    padding: 1.1rem 1rem;
+}
+.interactive-map {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.interactive-map-mobile {
+    display: none;
+}
 
+@media screen and (max-width: 1200px) {
+    .main-page {
+        grid-template-columns: 100%;
+    }
+    .main-page .map-container {
+        display: none;
+    }
+    .interactive-map-mobile {
+        display: block;
+        height: auto;
+    }
+}
 @media screen and (max-width: 600px) {
     nav {
         flex-direction: column;
