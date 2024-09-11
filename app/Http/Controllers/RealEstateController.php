@@ -12,7 +12,8 @@ class RealEstateController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $realEstates = RealEstate::query()->orderBy("created_at", "desc")->get();
+        return view('index', ['realEstates' => $realEstates]);
     }
 
     /**
