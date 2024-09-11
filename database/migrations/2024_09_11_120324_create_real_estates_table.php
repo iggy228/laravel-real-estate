@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->integer('bedroom_count');
             $table->integer('bathroom_count');
             $table->integer('size');
+            $table->text('image_url');
         });
     }
 

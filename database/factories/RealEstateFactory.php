@@ -22,6 +22,7 @@ class RealEstateFactory extends Factory
             'bedroom_count' => fake()->numberBetween(1, 5),
             'bathroom_count' => fake()->numberBetween(1, 5),
             'size' => fake()->numberBetween(1000, 5000),
+            'image_url' => fake()->imageUrl(),
         ];
     }
 }
