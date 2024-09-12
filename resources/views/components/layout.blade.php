@@ -18,6 +18,7 @@
     <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet" />
 
     <!-- Own styles -->
+    @vite(['resources/sass/app.scss'])
     @vite(['resources/css/app.css'])
 </head>
 

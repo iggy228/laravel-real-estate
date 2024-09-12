@@ -1,39 +1,22 @@
 <x-layout>
-    <div class="main-page">
-        <main>
-            <nav id="topnav">
-                <div class="logo-section">
-                    <a href="/" class="logo">
-                        <b>Real</b>Estate
-                    </a>
-                    <button id="mobile-menu" class="fa-solid fa-bars button mobile-menu"
-                        onclick="toggleMobileMenu()"></button>
-                </div>
-                <!-- Links -->
-                <div class="nav-links">
-                    <a href="/" class="active">Buy</a>
-                    <a href="/sell">Sell</a>
-                    <a href="/rent">Rent</a>
-                </div>
-                <!-- Actions -->
-                <div class="actions">
-                    <button class="button button-primary"><i class="fa fa-plus"></i>Add Listing</button>
-                    <button class="button"><img class="profile-btn-img" src="{{ asset('assets/images/avatar.png') }}"
-                            alt="profile menu"></button>
-                </div>
-            </nav>
+    <div class="main-page row">
+        <main class="col-12 col-xl-8">
+            <x-nav-bar />
             <!-- Map section on smaller screen than 1200px -->
-            <img class="interactive-map interactive-map-mobile" src="{{ asset('assets/images/map.png') }}"
+            <img class="interactive-map d-block d-xl-none rounded" src="{{ asset('assets/images/map.png') }}"
                 alt="interactive map">
 
             <div class="content row">
                 <!-- Filters menu -->
-                <section class="filter-menu">
-                    <div class="row justify-between filter-headline-row">
+                <section class="filter-menu col-12 col-md-5 col-lg-4">
+                    <div class="row justify-content-between filter-headline-row">
                         <h3 class="filter-headline">Filters</h3>
-                        <button class="button reset-filter">Reset filters <span class="filter-count">5</span></button>
+                        <button class="button reset-filter">
+                            <span class="reset-text">Reset filters</span>
+                            <span class="filter-count">5</span>
+                        </button>
                     </div>
-                    <form action="">
+                    <form class="filter-form" action="">
                         <div class="column">
                             <h3 class="subtitle">Property type</h3>
                             <span>
@@ -81,9 +64,9 @@
                             </span>
                         </div>
                         {{-- Select filters --}}
-                        <div class="column">
-                            <div class="row justify-between gap-10">
-                                <div class="w-full">
+                        <div class="column select-filters">
+                            <div class="row justify-content-between gap-10">
+                                <div class="w-100">
                                     <h3 class="subtitle">Min. Price</h3>
                                     <select name="min-price">
                                         <option value="any">Any</option>
@@ -93,7 +76,7 @@
                                         <option value="5000000">$5,000,000</option>
                                     </select>
                                 </div>
-                                <div class="w-full">
+                                <div class="w-100">
                                     <h3 class="subtitle">Max. Price</h3>
                                     <select name="max-price">
                                         <option value="any">Any</option>
@@ -104,8 +87,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row justify-between gap-10">
-                                <div class="w-full">
+                            <div class="row justify-content-between gap-10">
+                                <div class="w-100">
                                     <h3 class="subtitle">Bedroom</h3>
                                     <select name="bedroom-count">
                                         <option value="any">Any</option>
@@ -114,7 +97,7 @@
                                         <option value="3">3</option>
                                     </select>
                                 </div>
-                                <div class="w-full">
+                                <div class="w-100">
                                     <h3 class="subtitle">Bathroom</h3>
                                     <select name="bathroom-count">
                                         <option value="any">Any</option>
@@ -124,8 +107,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row justify-between gap-10">
-                                <div class="w-full">
+                            <div class="row justify-content-between gap-10">
+                                <div class="w-100">
                                     <h3 class="subtitle">Size (Min)</h3>
                                     <select name="min-size">
                                         <option value="any">Any</option>
@@ -135,7 +118,7 @@
                                         <option value="5000">5000 Sq.ft</option>
                                     </select>
                                 </div>
-                                <div class="w-full">
+                                <div class="w-100">
                                     <h3 class="subtitle">Size (Max)</h3>
                                     <select name="max-size">
                                         <option value="any">Any</option>
@@ -179,8 +162,8 @@
                     </form>
                 </section>
 
-                <section class="result-list">
-                    <div class="row w-full justify-between">
+                <section class="result-list col-12 col-md-7 col-lg-8">
+                    <div class="row w-100 justify-content-between">
                         <h4>Showing 0 search results</h4>
                         <select name="sort" id="sort">
                             <option value="created-at-asc">Newest</option>
@@ -196,8 +179,9 @@
             </div>
         </main>
         <!-- Map section -->
-        <div class="map-container">
-            <img src="{{ asset('assets/images/map.png') }}" alt="interactive map" class="interactive-map">
+        <div class="col-lg-4 pt-3 d-xl-block d-none">
+            <img src="{{ asset('assets/images/map.png') }}" alt="interactive map"
+                class="interactive-map rounded w-100 h-100">
         </div>
     </div>
 </x-layout>
