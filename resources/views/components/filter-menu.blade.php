@@ -1,5 +1,5 @@
 <section id="filterMenu" class="filter-menu col-12 col-md-5 col-lg-4 h-auto pb-2">
-    <div class="d-flex justify-content-between align-items-baseline filter-headline-row ">
+    <div class="d-flex justify-content-between align-items-baseline filter-headline-row">
         <h3 id="filterMenuHeader" class="filter-headline flex-fill" data-bs-toggle="collapse"
             data-bs-target="#filterCollapse" aria-expanded="true" aria-controls="filterCollapse">
             Filters
@@ -20,49 +20,19 @@
         <form class="filter-form px-2" action="">
             <div class="d-flex flex-column">
                 <h3 class="subtitle">Property type</h3>
-                <span>
-                    <input type="checkbox" name="type" value="house" id="house-checkbox">
-                    <label for="house-checkbox">House</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="type" value="apartment" id="apartment-checkbox">
-                    <label for="apartment-checkbox">Apartment</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="type" value="room" id="room-checkbox">
-                    <label for="room-checkbox">Room</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="type" value="townhall" id="townhall-checkbox">
-                    <label for="townhall-checkbox">Townhall</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="type" value="parking" id="parking-checkbox">
-                    <label for="parking-checkbox">Parking</label>
-                </span>
+                <x-checkbox-input name="type" label="House" value="house" id="house-checkbox" />
+                <x-checkbox-input name="type" label="Apartment" value="apartment" id="apartment-checkbox" />
+                <x-checkbox-input name="type" label="Room" value="room" id="room-checkbox" />
+                <x-checkbox-input name="type" label="Townhall" value="townhall" id="townhall-checkbox" />
+                <x-checkbox-input name="type" label="Parking" value="parking" id="parking-checkbox" />
             </div>
             <div class="d-flex flex-column">
                 <h3 class="subtitle">Style of Home</h3>
-                <span>
-                    <input type="checkbox" name="style" value="a-frame" id="a-frame-checkbox">
-                    <label for="a-frame-checkbox">A-Frame</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="style" value="bungalow" id="bungalow-checkbox">
-                    <label for="bungalow-checkbox">Bungalow</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="style" value="cottage" id="cottage-checkbox">
-                    <label for="cottage-checkbox">Cottage</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="style" value="dome" id="dome-checkbox">
-                    <label for="dome-checkbox">Dome</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="style" value="spanish" id="spanish-checkbox">
-                    <label for="spanish-checkbox">Spanish</label>
-                </span>
+                <x-checkbox-input name="style" label="A-Frame" value="a-frame" id="a-frame-checkbox" />
+                <x-checkbox-input name="style" label="Bungalow" value="bungalow" id="bungalow-checkbox" />
+                <x-checkbox-input name="style" label="Cottage" value="cottage" id="cottage-checkbox" />
+                <x-checkbox-input name="style" label="Dome" value="dome" id="dome-checkbox" />
+                <x-checkbox-input name="style" label="Spanish" value="spanish" id="spanish-checkbox" />
             </div>
             {{-- Select filters --}}
             <div class="d-flex flex-column select-filters">
@@ -135,29 +105,18 @@
             {{-- Accessibilty checkboxes --}}
             <div class="d-flex flex-column">
                 <h3 class="subtitle">Accessibility Features</h3>
-                <span>
-                    <input type="checkbox" name="accessibility" value="extra-wide-doorways"
-                        id="extra-wide-doorways-checkbox">
-                    <label for="extra-wide-doorways-checkbox">Extra-wide Doorways</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="accessibility" value="ramps" id="ramps-checkbox">
-                    <label for="ramps-checkbox">Ramps</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="accessibility" value="grab-bars" id="grab-bars-checkbox">
-                    <label for="grab-bars-checkbox">Grab Bars</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="accessibility" value="lower-counter-heights"
-                        id="lower-counter-heights-checkbox">
-                    <label for="lower-counter-heights-checkbox">Lower counter heights</label>
-                </span>
-                <span>
-                    <input type="checkbox" name="accessibility" value="spanish" id="spanish-accessibility-checkbox">
-                    <label for="spanish-accessibility-checkbox">Spanish</label>
-                </span>
+                <x-checkbox-input name="accessibility" label="Extra-wide doorways" value="extra-wide-doorways"
+                    id="extra-wide-doorways-checkbox" />
+                <x-checkbox-input name="accessibility" label="Ramps" value="ramps" id="ramps-checkbox" />
+                <x-checkbox-input name="accessibility" label="Grab bars" value="grab-bars"
+                    id="grab-bars-checkbox" />
+                <x-checkbox-input name="accessibility" label="Lower counter heights" value="lower-counter-heights"
+                    id="lower-counter-heights-checkbox" />
+                <x-checkbox-input name="accessibility" label="Spanish" value="spanish"
+                    id="spanish-accessibility-checkbox" />
             </div>
         </form>
+
+        <hr class="d-md-none">
     </div>
 </section>

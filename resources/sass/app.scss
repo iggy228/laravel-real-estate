@@ -14,10 +14,8 @@ $primary: #1666d9;
 }
 body {
     background-color: white;
-    min-height: 100vh;
-    height: 100vh;
-    max-height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 a {
     text-decoration: none;
@@ -40,17 +38,18 @@ span {
 .interactive-map {
     object-fit: cover;
 }
-.main-page {
-    padding: 0 1rem;
+.interactive-map-full {
+    margin-top: 6rem;
 }
 
 // navigation styles
-nav {
+.navbar {
+    right: 33%;
     padding-bottom: 1rem;
     border-bottom: 1px solid #e9e9e9;
-    margin-bottom: 1rem;
-    padding-top: 1.1rem;
     z-index: 10;
+    margin-left: 0.875rem;
+    margin-right: 0.875rem;
 }
 .nav-link {
     color: #a6a6a6;
@@ -86,11 +85,30 @@ nav {
     font-weight: 700;
     margin-left: 0.5rem;
 }
+.filter-menu {
+    height: calc(100vh - 6rem);
+    max-height: calc(100vh - 6rem);
+    overflow: scroll;
+}
 .filter-menu .subtitle {
     color: #737373;
     width: 100%;
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
+}
+.filter-menu h3 {
+    margin: 0;
+}
+.filter-menu select {
+    width: 100%;
+}
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.select-filters {
+    gap: 1.5rem;
 }
 .collapse-indicator {
     transition: transform 0.5s;
@@ -98,18 +116,95 @@ nav {
 .collapse-indicator.collapsed {
     transform: rotate(180deg);
 }
+.sort-select {
+    min-width: 8rem;
+}
 
+.main-page main {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+}
+
+.content {
+    margin-top: 6rem;
+}
+.content .result-list h4 {
+    margin: 0;
+}
+.filter-headline-row {
+    margin-bottom: 1rem;
+}
+.real-estate-grid {
+    height: calc(100vh - 10rem);
+    max-height: calc(100vh - 10rem);
+    overflow: scroll;
+}
+.real-estate-card-info {
+    margin-top: 1rem;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+/* Card component styles */
+.card {
+    border: var(--gray-border);
+    border-radius: 10px;
+    padding: 0.375rem;
+}
+.card-image {
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    width: 100%;
+}
+.card h6 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.card p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        overflow: visible;
+    }
+    .navbar {
+        margin: 0 0.75rem;
+        left: 0;
+        right: 0;
+    }
+    .real-estate-grid {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+    .filter-menu {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+    .content {
+        margin-top: 1.5rem;
+    }
+}
 @media screen and (max-width: 992px) {
     .navbar {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     main {
         padding-top: 5rem;
+    }
+    .interactive-map-full {
+        margin-top: 0.5rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -118,8 +213,12 @@ nav {
         top: 0;
         left: 0;
         right: 0;
-        padding-left: 2rem;
-        padding-right: 2rem;
+    }
+    .filter-headline-row {
+        border-bottom: 1px solid #a6a6a6;
+    }
+    .filter-headline-row h3 {
+        padding-bottom: 1.5rem;
     }
     main {
         padding-top: 4.5rem;

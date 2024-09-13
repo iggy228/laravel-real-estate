@@ -6,10 +6,8 @@ const filterMenuHeaderEl = document.getElementById('filterMenuHeader')
 
 function activateFilterMenuCollapseOnScreenWidth(width) {
     if (width > 768) {
-        console.log(width)
         filterMenuHeaderEl.setAttribute('data-bs-toggle', '')
     } else {
-        console.log(width)
         filterMenuHeaderEl.setAttribute('data-bs-toggle', 'collapse')
     }
 }

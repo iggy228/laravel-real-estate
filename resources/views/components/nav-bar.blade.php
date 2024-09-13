@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-white">
+<nav class="navbar navbar-expand-md bg-white fixed-top">
     <div class="logo-section col-12 col-md-4 d-flex justify-content-between">
         <a href="/" class="navbar-brand logo">
             <b>Real</b>Estate
