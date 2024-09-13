@@ -13,43 +13,43 @@ Web made in Laravel framework with HTML, CSS, JS and Bootstrap css library for d
 
 1. Clone repository
 
-```
-git clone https://github.com/iggy228/laravel-real-estate.git
-cd laravel-real-estate
-```
+    ```bash
+    git clone https://github.com/iggy228/laravel-real-estate.git
+    cd laravel-real-estate
+    ```
 
 2. Install PHP and Node.js dependencies
 
-```
-composer install
-npm install
-```
+    ```bash
+    composer install
+    npm install
+    ```
 
 3. Create **.env** file
 
     Copy **.env.example** file to **.env**
 
-```
-cp .env.example .env
-```
+    ```bash
+    cp .env.example .env
+    ```
 
 4. Run migrations and seeders
 
-```
-php artisan migrate
-php artisan db:seed
-```
+    ```bash
+    php artisan migrate
+    php artisan db:seed
+    ```
 
 5. Run development servers with frontend server
 
-```
-php artisan serve
-```
+    ```bash
+    php artisan serve
+    ```
 
-For running frontend server use command
+    For running frontend server use command
 
-```
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
 
-You can open application on localhost:8000
+Now you can open application on localhost:8000
