@@ -88,7 +88,7 @@ span {
 .filter-menu {
     height: calc(100vh - 6rem);
     max-height: calc(100vh - 6rem);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .filter-menu .subtitle {
     color: #737373;
@@ -138,7 +138,7 @@ span {
 .real-estate-grid {
     height: calc(100vh - 10rem);
     max-height: calc(100vh - 10rem);
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .real-estate-card-info {
     margin-top: 1rem;
